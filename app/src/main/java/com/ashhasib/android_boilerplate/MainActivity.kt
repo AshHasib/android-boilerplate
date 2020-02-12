@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //FireabaseIO(this).writeData()
-        FireabaseIO(this).readData()
-
+        /**
+         * Boilerplate codes testing
+         */
 
     }
 }
