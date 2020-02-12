@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "738893936360",
+    "firebase_url": "https://android-boilerplate-5427b.firebaseio.com",
+    "project_id": "android-boilerplate-5427b",
+    "storage_bucket": "android-boilerplate-5427b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738893936360:android:a0b0a43ccd9bb9259dfb5d",
+        "android_client_info": {
+          "package_name": "com.ashhasib.android_boilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738893936360-5c9he4t6e1htgvk584e804hh1rec6la9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashhasib.android_boilerplate",
+            "certificate_hash": "4fb6559bc4665b70d4d421f6b9750d261cc9fa5c"
+          }
+        },
+        {
+          "client_id": "738893936360-algi5glqpqepe8ejlv1svov66p0fjf6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDunSidcNdtuv6eDCkrYt1VnXy48PCJc2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738893936360-algi5glqpqepe8ejlv1svov66p0fjf6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
