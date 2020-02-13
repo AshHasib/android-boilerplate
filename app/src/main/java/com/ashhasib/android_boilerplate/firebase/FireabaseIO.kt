@@ -2,13 +2,12 @@ package com.ashhasib.android_boilerplate.firebase;
 
 import android.content.Context
 import android.net.Uri
+import android.util.Log
 import android.widget.Toast
 import com.ashhasib.android_boilerplate.model.UploadImage
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
+
 
 class FireabaseIO(val context: Context){
 
@@ -53,6 +52,57 @@ class FireabaseIO(val context: Context){
 
         })
     }
+
+
+
+
+    /**
+     * Update a node value in firebase
+     * data - key -(title-John Doe, email-john@gmail.com,phone-0123456789)
+     * Update the phone number
+     */
+    fun updateData() {
+        val ref:DatabaseReference = FirebaseDatabase
+            .getInstance()
+            .getReference("data")
+            .child("phone")
+
+        ref.setValue("987654321")
+    }
+
+
+
+
+
+
+
+
+    /**
+     * Delete a node data - (title-Hello, description-This is description 1), (title-Hello Again, description-This is description 2)
+     * Delete first node
+     */
+    fun deleteData() {
+        val ref = FirebaseDatabase.getInstance().reference
+        val applesQuery: Query = ref.child("data").orderByChild("title").equalTo("Hello")
+
+        applesQuery.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (appleSnapshot in dataSnapshot.children) {
+                    appleSnapshot.ref.removeValue()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("DELETE", "onCancelled", databaseError.toException())
+            }
+        })
+    }
+
+
+
+
+
+
 
 
     /**
