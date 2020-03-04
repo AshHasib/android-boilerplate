@@ -17,3 +17,9 @@ Boilerplate code for my android projects. The codes will be posted and the READM
 
 ## SharedPreference
 - Added UserSessionManager class that I use for One Time Login, covers basic
+
+## Fonts
+- Added Open Sans and necessary code in styles.xml
+
+## Activity Transition Animation
+- slide in / slide out added
